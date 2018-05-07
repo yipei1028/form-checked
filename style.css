@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.cover-picture{
+  display: inline-block;
+  width:60%;
+  height: auto;
+}
+
+.cover-picture > img{
+ width:100%;
+ height: 100vh;
+}
+
+form{
+  display: inline-block;
+  width:38%;
+  height: 100%;
+  vertical-align: top;
+  padding:15px 0px 0px 20px;
+  line-height: 25px;
+}
+
+form > p{
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom:40px;
+}
+
+form > .input-container{
+  border:1px solid lightgray;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.input-title{
+  font-weight:500;
+  font-size: 15px;
+  color:gray;
+}
+
+input, button{
+  border:0px;
+  height: 30px;
+  width:80%;
+  margin-top:10px;
+}
+
+::placeholder{
+font-size: 25px;
+  color:lightgray;
+
+}
+
+.gender-container > input{
+  width:auto;
+  margin: 10px;
+  vertical-align: middle;
+  height: 20px;
+}
+
+button{
+  height: 40px;
+  width:100%;
+  font-size: 25px;
+  background-color: rgb(62, 129, 211);
+  color:white;
+  border:0px;
+  border-radius:25px;
+  padding:5px;
+}
+
+form > input:valid+.check{
+ display: inline-block;
+}
+
+form > input:invalid+.check{
+  display: none;
+}
+
+.gender-container{
+display: inline-block;
+width:80%;
+}
+
+.check > img{
+  width:30px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 650px){
+ .cover-picture{
+   display: block;
+   width:100%;
+ }
+ form{
+   display: block;
+   height: 100%;
+   width:100%;
+   padding: 20px 0 0 0 ;
+ }
+ .cover-picture> img{
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* ie8 */
+ }
+}
+

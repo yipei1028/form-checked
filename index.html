@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="cover-picture">
+      <img src="./image/cover.jpg" alt="cover">
+    </div>
+
+    <form>
+      <p>Sign up</p>
+      <div class="input-container">
+        <div class="input-title">Account：</div>
+        <input type="text" placeholder="Enter your account..." required pattern="[0-9a-zA-z],{6,20}">
+        <span class="check">
+          <img src="./image/success.png" alt="">
+        </span>
+        </div>
+        <br/>
+        <div class="input-container">
+          <div class="input-title">Password： </div>
+          <input type="password" placeholder="Enter your password..." required pattern="[0-9a-zA-z],{6,20}">
+          <span class="check">
+            <img src="./image/success.png" alt="">
+          </span>
+        </div>
+        <br/>
+        <div class="input-container ">
+          <div class="input-title "> Email Address：</div>
+          <input type="email " placeholder="Enter your email... " required>
+          <span class="check">
+            <img src="./image/success.png" alt="">
+          </span>
+        </div>
+        <br/>
+        <div class="input-container ">
+          <div class="input-title "> Mobile: </div>
+          <input type="text " placeholder="Enter your phone number... " pattern="[0-9],{8,10}">
+          <span class="check">
+            <img src="./image/success.png" alt="">
+          </span>
+        </div>
+        <br/>
+        <div class="input-container gender ">
+          <div class="input-title "> Gender: </div>
+          <div class="gender-container">
+            Male
+            <input type="radio">Female
+            <input type="radio">
+          </div>
+          <span class="check">
+            <img src="./image/success.png" alt="">
+          </span>
+        </div>
+        <br/>
+        <div class="input-container">
+          <div class="input-title"> Birthday</div>
+          <input type="date" required>
+          <span class="check">
+            <img src="./image/success.png" alt="">
+          </span>
+        </div>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+
+
+</body>
+
+</html>
