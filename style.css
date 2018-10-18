@@ -33,13 +33,14 @@ form{
 form > p{
   font-weight: bold;
   font-size: 40px;
-  margin-bottom:40px;
+  margin-bottom:30px;
 }
 
 form > .input-container{
   border:1px solid lightgray;
   padding: 10px;
   border-radius: 15px;
+  position: relative;
 }
 
 .input-title{
@@ -79,22 +80,33 @@ button{
   padding:5px;
 }
 
-form > input:valid+.check{
- display: inline-block;
+.check > img{
+  width:20px;
+  vertical-align: middle;
+  position: absolute;
+  top: 10px;
+  z-index:1000;
 }
 
-form > input:invalid+.check{
+.success > img{
+  width:20px;
+  vertical-align: middle;
+  position: absolute;
+  top: 10px;
+  z-index:0;
+}
+
+form input:valid+.success{
+  z-index:1000;
+}
+
+form input:invalid+.success{
   display: none;
 }
 
 .gender-container{
 display: inline-block;
 width:80%;
-}
-
-.check > img{
-  width:30px;
-  vertical-align: middle;
 }
 
 @media only screen and (max-width: 650px){
@@ -114,4 +126,3 @@ width:80%;
     width: 100%; /* ie8 */
  }
 }
-
