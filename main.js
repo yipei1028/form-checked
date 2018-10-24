@@ -7,18 +7,17 @@ var app = new Vue({
       email: '',
       gender: '',
       birthday: ''
-    }
+    },
+    submitted: false
   },
   methods:{
     checkForm: function(){
       this.userData.name = this.$refs.name.value;
       this.userData.mobile = this.$refs.mobile.value;
       this.userData.email = this.$refs.email.value;
-      this.userData.gender = this.$refs.gender.value;
-      this.userData.birthday= this.$refs.birthday.value;
+      // this.userData.gender = this.$refs.gender.value;
+      // this.userData.birthday= this.$refs.birthday.value;
+      this.submitted = true;
     }
-  },
-  computed:{
-  
   }
 })

@@ -30,6 +30,16 @@ form{
   line-height: 25px;
 }
 
+.doubleCheck{
+  display: inline-block;
+  width:38%;
+  height: 100%;
+  vertical-align: top;
+  padding:15px 0px 0px 20px;
+  line-height: 25px;
+}
+
+
 form > p{
   font-weight: bold;
   font-size: 40px;

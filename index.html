@@ -9,16 +9,22 @@
 </head>
 
 <body>
-    <div id="app">
-
-
-<div class="main">
-    <div class="cover-picture">
-        <img src="./image/cover.jpg" alt="cover">
-    </div>
-    <form>
-        <p>Sign up</p>
-        <div class="input-container">
+  <div id="app">
+		<div class="main">
+			<div class="cover-picture">
+				<img src="./image/cover.jpg" alt="cover">
+			</div>
+			<div class="doubleCheck" v-if="submitted">Thanks you! :)
+				<p>請確認資訊無誤：</p>
+				<p>Name: {{ userData.name }}</p>
+				<p>Email Address: {{ userData.email }}</p>
+				<p>Mobile: {{ userData.mobile }}</p>
+				<p>Gender: {{ userData.gender }}</p>
+				<p>Birthday: {{ userData.birthday }}</p>
+			</div>
+			<form v-if="!submitted">
+				<p>Sign up</p>
+				<div class="input-container">
 					<div class="input-title">Name:</div>
 					<input type="text" placeholder="Enter your Name..." ref="name" required>
 					<span class="success">
@@ -27,9 +33,9 @@
 					<span class="check">
 						<img src="./image/checked.png" alt="">
 					</span>
-        </div>
-        <br/>
-        <div class="input-container">
+				</div>
+				<br/>
+				<div class="input-container">
 					<div class="input-title"> Email Address:</div>
 					<input type="email" placeholder="Enter your email... " ref="email" required>
 					<span class="success">
@@ -38,9 +44,9 @@
 					<span class="check">
 						<img src="./image/checked.png" alt="">
 					</span>
-        </div>
-        <br/>
-        <div class="input-container ">
+				</div>
+				<br/>
+				<div class="input-container ">
 					<div class="input-title "> Mobile: </div>
 					<!-- <input type="text" placeholder="Enter your phone number... " ref="mobile" pattern="[0-9],{8,10}"> -->
 					<input type="text" placeholder="Enter your phone number... " ref="mobile" required> 
@@ -50,9 +56,9 @@
 					<span class="check">
 						<img src="./image/checked.png" alt="">
 					</span>
-        </div>
-        <br/>
-        <div class="input-container gender ">
+				</div>
+				<br/>
+				<div class="input-container gender ">
 					<div class="input-title"> Gender: </div>
 					<div class="gender-container">
 					Male
@@ -60,9 +66,9 @@
 					Female
 					<input type="radio">
 					</div>
-        </div>
-        <br/>
-        <div class="input-container">
+				</div>
+				<br/>
+				<div class="input-container">
 					<div class="input-title"> Birthday</div>
 					<input type="date" required v-model:value="userData.birthday">
 					<span class="success">
@@ -71,19 +77,11 @@
 					<span class="check">
 						<img src="./image/checked.png" alt="">
 					</span>
-        </div>
+				</div>
 				<br/>
-				<button @click="checkForm">Submit</button>
-    </form>
-        
-    </div>
-        
-        請確認資訊無誤：
-        Name: {{ userData.name }}
-        Email Address: {{ userData.email }}
-        Mobile: {{ userData.mobile }}
-        Gender: {{ userData.gender }}
-        Birthday: {{ userData.birthday }}
+			</form>  
+			<button v-on:click="checkForm">Submit</button>
+		</div>
 	</div>
 </body>
 
